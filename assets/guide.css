@@ -39,7 +39,7 @@
 	position: fixed;
 	z-index: 100005;
 	right: calc(16px + env(safe-area-inset-right, 0px));
-	bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+	bottom: calc(66px + env(safe-area-inset-bottom, 0px));
 	border: 0;
 	border-radius: 999px;
 	padding: 12px 18px;
@@ -47,6 +47,18 @@
 	color: #fff;
 	cursor: pointer;
 	box-shadow: 0 8px 24px rgba(15, 40, 40, 0.22);
+	animation: gm-guide-rise 1s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+}
+
+@keyframes gm-guide-rise {
+	from {
+		opacity: 0;
+		transform: translateY(36px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .gm-guide-launcher[data-active="true"]::after {
@@ -298,6 +310,10 @@ iframe.gm-demo-screen {
 	iframe.gm-demo-screen {
 		transition: none;
 		scroll-behavior: auto;
+	}
+
+	.gm-guide-launcher {
+		animation: none;
 	}
 }
 
