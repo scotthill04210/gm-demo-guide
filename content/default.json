@@ -1,0 +1,316 @@
+{
+  "version": 1,
+  "tours": [
+    {
+      "id": "tour-main",
+      "title": "Take a quick tour of Demo Growth Memberships",
+      "steps": [
+        {
+          "id": "tour-main-01",
+          "page_match": {"path": "/"},
+          "target": ".dashboard-row",
+          "title": "Welcome to your dashboard",
+          "body": "This is your home page. Think of it as your control panel.\nThe buttons are grouped by topic: members, events, money and reports.\nYou can always come back here by clicking Dashboard at the top."
+        },
+        {
+          "id": "tour-main-02",
+          "page_match": {"path": "/"},
+          "target": "#menu-main-menu",
+          "title": "The main menu",
+          "body": "The menu at the top works on every page.\nHover over Members or Events to see more choices.\nWe will start with Members."
+        },
+        {
+          "id": "tour-main-03",
+          "page_match": {"path": "/members-page/"},
+          "target": ".wpv-filter-form",
+          "title": "Your member list",
+          "body": "This page lists every member business in the demo.\nUse the date boxes to show only members changed in a certain time frame.\nClick Reset Filters to see everyone again."
+        },
+        {
+          "id": "tour-main-04",
+          "page_match": {"path": "/members-page/"},
+          "target": ".js-wpv-view-layout",
+          "title": "Open a member",
+          "body": "Each row shows a business name, address, phone, type and status.\nClick a business name to open its full member page."
+        },
+        {
+          "id": "tour-main-05",
+          "page_match": {"path": "/membership/"},
+          "target": null,
+          "title": "Everything about one member",
+          "body": "A member page keeps it all in one place: details, locations, people, notes and dues information.\nClick Edit, or the small edit links next to each item, to change something.\nYour change opens in a pop-up box, so you never leave the page."
+        },
+        {
+          "id": "tour-main-06",
+          "page_match": {"path": "/members-page/add-a-member/"},
+          "target": "form.cred-form",
+          "title": "Add a new member",
+          "body": "Fill in the business name, pick a member type and status, and add an address and phone.\nWhen you save, you go straight to the new member's page.\nThere you can add locations, people and notes."
+        },
+        {
+          "id": "tour-main-07",
+          "page_match": {"path": "/events/"},
+          "target": ".tribe-events-calendar-list",
+          "title": "Browse upcoming events",
+          "body": "This is the event calendar shown as a list.\nEach event shows its date, place and price.\nClick an event name to see the full details."
+        },
+        {
+          "id": "tour-main-08",
+          "page_match": {"path": "/event/"},
+          "target": ".tribe-tickets__tickets-wrapper",
+          "title": "Pick your tickets",
+          "body": "Use the + and - buttons to choose how many tickets you want.\nClick Get Tickets. A box opens where you enter details for each person coming.\nThen choose Save and View Cart or Checkout Now."
+        },
+        {
+          "id": "tour-main-09",
+          "page_match": {"path": "/register-georgia-advisory-council-meeting/"},
+          "target": ".cem-registration-wrap",
+          "title": "Register for a meeting step by step",
+          "body": "Some events use a longer sign-up form with five steps: Company, Tickets, Attendees, Sessions and Summary.\nA running total keeps track of the cost as you go.\nYou can click Save and Continue Later to finish another time."
+        },
+        {
+          "id": "tour-main-10",
+          "page_match": {"path": "/membership-sign-up/"},
+          "target": "#gform_wrapper_2",
+          "title": "See how a new member joins",
+          "body": "This is an example of the form a new member fills out to join.\nAs they enter details like bulk plants and gallons sold, the dues add up on their own.\nAfter they submit, they are asked to pay for their membership."
+        },
+        {
+          "id": "tour-main-11",
+          "page_match": {"path": "/cart/"},
+          "target": ".wc-block-cart",
+          "title": "Your cart",
+          "body": "Tickets and memberships you choose land here.\nCheck what is in the cart, then move on to checkout when you are ready.\nIf the cart is empty, you will see a few items you can add."
+        },
+        {
+          "id": "tour-main-12",
+          "page_match": {"path": "/my-account/orders/"},
+          "target": "table.account-orders-table",
+          "title": "Look back at your orders",
+          "body": "Every order you place shows up here with its date, status and total.\nClick View on any order to open it.\nThat's the end of the tour. Have fun exploring!"
+        }
+      ]
+    }
+  ],
+  "help_panels": [
+    {
+      "id": "help-dashboard",
+      "page_match": {"path": "/", "post_type": null},
+      "title": "Dashboard",
+      "body": "This is your home base. It gathers shortcuts to everything in the demo, grouped as Members, Locations, Contacts, Events, Courses, Finances and Reports.\nWhat to expect: each button takes you to a page. Use the Dashboard link in the top menu to come back here any time.",
+      "tips": [
+        "Click All Members to see the full member list.",
+        "Click Member Events to see events for members.",
+        "Click All Courses to see training classes."
+      ]
+    },
+    {
+      "id": "help-members-list",
+      "page_match": {"path": "/members-page/", "post_type": null},
+      "title": "Members",
+      "body": "This page lists every member business with its address, phone, number of bulk plants, type, status and the date it was last changed.\nWhat to expect: the list is split into pages. Changing a filter updates the list.",
+      "tips": [
+        "Pick a Modified From and Modified To date to see members changed in that time.",
+        "Click Clear Dates or Reset Filters to see everyone again.",
+        "Click a business name, such as Riverbend Solar Partners, to open its member page."
+      ]
+    },
+    {
+      "id": "help-member-detail",
+      "page_match": {"path": "/membership/", "post_type": "membership"},
+      "title": "Member page",
+      "body": "This page shows everything about one member: details, billing address, phone, website, main contacts, locations, people, notes and dues information.\nWhat to expect: each edit link opens a small pop-up box. Save it and the page shows your change.",
+      "tips": [
+        "Click Edit at the top to change the member name, type or status.",
+        "Under Locations, click Add a Location to add a branch office.",
+        "Under People, click Add a NEW Contact to add a person to this member.",
+        "Under Member Notes, click Update Member Notes to write a note."
+      ]
+    },
+    {
+      "id": "help-add-member",
+      "page_match": {"path": "/members-page/add-a-member/", "post_type": null},
+      "title": "Add a Member",
+      "body": "Use this page to add a new member business. You can add one without charging them.\nWhat to expect: when you save, you land on the new member's page. Locations, notes and people can be added there.",
+      "tips": [
+        "Type a business name in Member Title.",
+        "Pick a member type, such as Affiliates or Marketers, and a status.",
+        "Fill in the address and phone, then save."
+      ]
+    },
+    {
+      "id": "help-contacts-list",
+      "page_match": {"path": "/members-page/search-contacts/", "post_type": null},
+      "title": "Search Contacts",
+      "body": "This page lists the people linked to member businesses. It shows each person's name, email, address, phone and the member they belong to.\nWhat to expect: click a name to open that person's page.",
+      "tips": [
+        "Look at the Membership column to see which business each person works for.",
+        "Click Reset Filters to clear any search.",
+        "Click a name, such as Demo Person 10017, to see their details."
+      ]
+    },
+    {
+      "id": "help-add-contact",
+      "page_match": {"path": "/members-page/add-a-contact/", "post_type": null},
+      "title": "Add a Contact",
+      "body": "Use this page to add a new person and link them to a member business.\nWhat to expect: when you save, you go to the new person's page.",
+      "tips": [
+        "Enter a full name and an email address.",
+        "Use Assign to Member to pick the business this person works for.",
+        "Add an address and phone if you like, then save."
+      ]
+    },
+    {
+      "id": "help-locations-list",
+      "page_match": {"path": "/members-page/search-locations/", "post_type": null},
+      "title": "Search Locations",
+      "body": "A member business can have more than one site. This page lists every location with its address, phone, website, the member it belongs to and its contact person.\nWhat to expect: the Location of column tells you which member owns each site.",
+      "tips": [
+        "Find a location such as Demo Location 3638 and see which member it belongs to.",
+        "Compare the billing address and the physical address.",
+        "Click Reset Filters to clear any search."
+      ]
+    },
+    {
+      "id": "help-add-location",
+      "page_match": {"path": "/members-page/add-a-location/", "post_type": null},
+      "title": "Add a Location",
+      "body": "Use this page to add a new site, such as a branch office, for a member business.\nWhat to expect: when you save, you go to the new location's page.",
+      "tips": [
+        "Pick the member this location belongs to.",
+        "Enter a location name and billing address.",
+        "Add a contact name and email for the location, then save."
+      ]
+    },
+    {
+      "id": "help-all-data-types",
+      "page_match": {"path": "/people-places-things/", "post_type": null},
+      "title": "All Data Types",
+      "body": "This page shows members, locations and contacts together in one list. The Data Type column tells you what each row is.\nWhat to expect: it is a handy place to look someone up when you are not sure if they are a member, a location or a person.",
+      "tips": [
+        "Check the Data Type column to see what each row is.",
+        "Click Reset Filters to see everything again."
+      ]
+    },
+    {
+      "id": "help-events-dashboard",
+      "page_match": {"path": "/events-dashboard/", "post_type": null},
+      "title": "Events Dashboard",
+      "body": "This page gives you quick links to member events and training courses.\nWhat to expect: each button opens a list of events in that group.",
+      "tips": [
+        "Click Member Events to see events just for members.",
+        "Click All Courses to see every training class.",
+        "Try Industry Training or Entry Level Driver Training to see a smaller group."
+      ]
+    },
+    {
+      "id": "help-events-list",
+      "page_match": {"path": "/events/", "post_type": null},
+      "title": "Events",
+      "body": "This is the event calendar shown as a list. Each event shows its date and time, place, price and how many tickets are left.\nWhat to expect: click an event name to open its page and buy tickets.",
+      "tips": [
+        "Use the search bar at the top to find an event by name.",
+        "Click Rural Leaders Luncheon to see a free event.",
+        "Click Rising Leaders Golf Classic to see an event with paid tickets."
+      ]
+    },
+    {
+      "id": "help-event-detail",
+      "page_match": {"path": "/event/", "post_type": "tribe_events"},
+      "title": "Event page",
+      "body": "This page shows one event: the date, time, cost, organizer, venue and a map link. Tickets are near the bottom.\nWhat to expect: after you pick tickets and click Get Tickets, a box asks for each attendee's details. Then you can go to your cart or straight to checkout.",
+      "tips": [
+        "Click Add to calendar to save the event to your own calendar.",
+        "Use + and - to choose how many tickets you want.",
+        "Click Get Tickets, fill in the attendee details, then click Save and View Cart."
+      ]
+    },
+    {
+      "id": "help-event-registration",
+      "page_match": {"path": "/register-georgia-advisory-council-meeting/", "post_type": null},
+      "title": "Event registration",
+      "body": "This page is a step-by-step sign-up for the Georgia Propane Fall Reunion. There are five steps: Company, Tickets, Attendees, Sessions and Summary.\nWhat to expect: a running total shows the cost as you go. The last step has a Proceed to Checkout button.",
+      "tips": [
+        "Fill in the company and contact details, then click Continue.",
+        "Choose Member or Guest tickets with the + and - buttons.",
+        "Add each attendee one at a time, then pick their sessions.",
+        "Click Save and Continue Later if you want to finish another time."
+      ]
+    },
+    {
+      "id": "help-membership-signup",
+      "page_match": {"path": "/membership-sign-up/", "post_type": null},
+      "title": "Example member sign-up",
+      "body": "This is an example of the form a new business fills out to become a member. It works out the yearly dues from the number of bulk plants and gallons sold.\nWhat to expect: the total updates as you fill it in. After the form is sent, the new member is asked to pay.",
+      "tips": [
+        "Enter a number of bulk plants and watch the price change.",
+        "Pick a state and look at the optional donation choices.",
+        "Click Save and Continue Later to see how a person can finish another time."
+      ]
+    },
+    {
+      "id": "help-cart",
+      "page_match": {"path": "/cart/", "post_type": null},
+      "title": "Cart",
+      "body": "Your cart holds the tickets and memberships you have picked but not paid for yet.\nWhat to expect: if the cart is empty, you will see a few suggested items to add.",
+      "tips": [
+        "Pick tickets on an event page, then come back here to see them.",
+        "Look at the suggested items shown when the cart is empty.",
+        "When items are in the cart, use the checkout button to move on."
+      ]
+    },
+    {
+      "id": "help-my-account",
+      "page_match": {"path": "/my-account/", "post_type": null},
+      "title": "My account",
+      "body": "This is your personal account area. From here you can see your orders, your saved addresses and your account details.\nWhat to expect: the links on the side switch between sections without leaving your account.",
+      "tips": [
+        "Click Orders to see past orders.",
+        "Click Addresses to see the addresses saved on your account.",
+        "Click Account details to change your account details."
+      ]
+    },
+    {
+      "id": "help-my-orders",
+      "page_match": {"path": "/my-account/orders/", "post_type": null},
+      "title": "Orders",
+      "body": "This page lists your orders with the order number, date, status and total.\nWhat to expect: the status tells you where each order stands, for example Completed, On hold or Cancelled.",
+      "tips": [
+        "Find an order that is Completed and one that is Cancelled.",
+        "Click View on an order to open it."
+      ]
+    },
+    {
+      "id": "help-convention-manager",
+      "page_match": {"path": "/convention-event-manager/", "post_type": null},
+      "title": "Convention Event Manager",
+      "body": "This page is where you run a big multi-day event. The side menu has sections for sessions, schedules, speakers, sponsors, registrations, registration forms and reports.\nWhat to expect: the summary boxes may show a dash until their numbers load.",
+      "tips": [
+        "Pick an event from the Select Event list, then click View Schedule.",
+        "Click Registrations to open the sign-up section.",
+        "Click Sessions to open the section for talks and classes."
+      ]
+    }
+  ],
+  "glossary": [
+    {"id": "term-member", "term": "Member", "definition": "A business that belongs to the group. Each member has its own page with details, locations, people and notes."},
+    {"id": "term-member-type", "term": "Member type", "definition": "The kind of member, such as Affiliates, Individuals, Marketers or Out of State Marketers."},
+    {"id": "term-member-status", "term": "Member status", "definition": "Extra detail about a member, such as Independent, Multi-State, Inactive or a sponsor level like Gold."},
+    {"id": "term-location", "term": "Location", "definition": "One site that belongs to a member, such as a branch office. A member can have many locations."},
+    {"id": "term-contact", "term": "Contact", "definition": "A person who works for a member business. Contacts are also called People."},
+    {"id": "term-dashboard", "term": "Dashboard", "definition": "The home page with shortcut buttons to every part of the demo."},
+    {"id": "term-filter", "term": "Filter", "definition": "A box or choice that narrows a list so you see only the rows you want. Reset Filters shows everything again."},
+    {"id": "term-dues", "term": "Dues", "definition": "The yearly fee a member pays to belong. On the sign-up form, dues are worked out from the member's size."},
+    {"id": "term-bulk-plant", "term": "Bulk plant", "definition": "A fuel storage site run by a member. The sign-up form uses the number of bulk plants to work out dues."},
+    {"id": "term-event", "term": "Event", "definition": "Something with a date and place, like a luncheon, meeting or golf day. Events are listed on the calendar."},
+    {"id": "term-course", "term": "Course", "definition": "A training class. Courses are events grouped together, such as Industry Training or Driver Training."},
+    {"id": "term-ticket", "term": "Ticket", "definition": "Your place at an event. Some tickets are free and some cost money."},
+    {"id": "term-attendee", "term": "Attendee", "definition": "A person who will go to an event. Each ticket is linked to one attendee."},
+    {"id": "term-registration", "term": "Registration", "definition": "Signing up for an event. Some events use a step-by-step form that collects company, ticket, attendee and session details."},
+    {"id": "term-session", "term": "Session", "definition": "One talk, class or activity inside a larger event. Attendees can pick which sessions they will go to."},
+    {"id": "term-cart", "term": "Cart", "definition": "The place that holds the tickets or memberships you picked before you pay."},
+    {"id": "term-checkout", "term": "Checkout", "definition": "The last step, where you enter billing details and place your order."},
+    {"id": "term-order", "term": "Order", "definition": "A record of something you bought, with its number, date, status and total."},
+    {"id": "term-order-status", "term": "Order status", "definition": "Where an order stands. For example, Completed means it is done, On hold means it is waiting, and Cancelled means it was stopped."}
+  ]
+}
