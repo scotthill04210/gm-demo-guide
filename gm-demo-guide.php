@@ -3,7 +3,7 @@
  * Plugin Name: GM Demo Guide
  * Plugin URI: https://github.com/scotthill04210/gm-demo-guide
  * Description: Front-end tour, page help, and glossary for the Demo Growth Memberships demo. Content is loaded from content/default.json.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Author: Demo Growth Memberships
@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-define('GM_DEMO_GUIDE_VERSION', '1.0.4');
+define('GM_DEMO_GUIDE_VERSION', '1.0.5');
 define('GM_DEMO_GUIDE_FILE', __FILE__);
 define('GM_DEMO_GUIDE_DIR', plugin_dir_path(__FILE__));
 define('GM_DEMO_GUIDE_URL', plugin_dir_url(__FILE__));
@@ -38,3 +38,4 @@ require_once GM_DEMO_GUIDE_DIR . 'includes/class-updates.php';
 GmDemoGuide\Guide::register();
 GmDemoGuide\Embed::register();
 GmDemoGuide\Updates::register();
+register_uninstall_hook(GM_DEMO_GUIDE_FILE, array('GmDemoGuide\\Updates', 'remove_network_loader'));

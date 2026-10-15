@@ -86,7 +86,9 @@ gm-demo-guide/gm-demo-guide.php
 
 WordPress unpacks that into `wp-content/plugins/gm-demo-guide/`, replacing the installed plugin. It does not use GitHub’s generated source archive, which would unpack as a different folder name. If a package still arrives under a name such as `gm-demo-guide-1.0.1`, the plugin renames that folder to `gm-demo-guide` before WordPress copies it. Other plugins are left alone.
 
-The `Version` header is the release version. Tag `v1.0.1` means the header says `Version: 1.0.1`. Publishing a release on `main` runs the **Release zip** workflow and attaches `gm-demo-guide.zip`. Do not mark the release as a pre-release. The update then appears under **Plugins** (or **Network Admin > Plugins** when the plugin is network-activated). That row also has a **Check for updates** link, next to Deactivate, for anyone who can install plugin updates.
+The `Version` header is the release version. Tag `v1.0.1` means the header says `Version: 1.0.1`. Publishing a release on `main` runs the **Release zip** workflow and attaches `gm-demo-guide.zip`. Do not mark the release as a pre-release. The update then appears under **Plugins**. On a multisite network it also appears under **Network Admin → Plugins** (`/wp-admin/network/plugins.php`).
+
+That row has a **Check for updates** link for anyone who can install plugin updates. On the network screen the link sits next to Network Activate or Network Deactivate, and the check stays on that screen. WordPress does not load a subsite-only plugin in Network Admin, so the plugin adds `wp-content/mu-plugins/gm-demo-guide-updates.php`. That file loads the updater on the network plugins screen only. The guide itself still runs only where the plugin is activated.
 
 There is no settings screen. Progress is kept in the browser (`localStorage`), so the plugin does not write to the database.
 
