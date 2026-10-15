@@ -86,7 +86,7 @@ gm-demo-guide/gm-demo-guide.php
 
 WordPress unpacks that into `wp-content/plugins/gm-demo-guide/`, replacing the installed plugin. It does not use GitHub’s generated source archive, which would unpack as a different folder name. If a package still arrives under a name such as `gm-demo-guide-1.0.1`, the plugin renames that folder to `gm-demo-guide` before WordPress copies it. Other plugins are left alone.
 
-The `Version` header is the release version. Tag `v1.0.1` means the header says `Version: 1.0.1`. Publishing a release on `main` runs the **Release zip** workflow and attaches `gm-demo-guide.zip`. Do not mark the release as a pre-release. The update then appears under **Plugins** (or **Network Admin > Plugins** when the plugin is network-activated).
+The `Version` header is the release version. Tag `v1.0.1` means the header says `Version: 1.0.1`. Publishing a release on `main` runs the **Release zip** workflow and attaches `gm-demo-guide.zip`. Do not mark the release as a pre-release. The update then appears under **Plugins** (or **Network Admin > Plugins** when the plugin is network-activated). That row also has a **Check for updates** link, next to Deactivate, for anyone who can install plugin updates.
 
 There is no settings screen. Progress is kept in the browser (`localStorage`), so the plugin does not write to the database.
 

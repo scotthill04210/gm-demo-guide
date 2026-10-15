@@ -71,6 +71,43 @@ final class Updates {
 		if (is_object($api) && is_callable(array($api, 'enableReleaseAssets'))) {
 			$api->enableReleaseAssets('/^gm-demo-guide\.zip$/');
 		}
+
+		$file = plugin_basename(GM_DEMO_GUIDE_FILE);
+		add_filter('plugin_action_links_' . $file, array(self::class, 'add_check_link'));
+		add_filter('network_admin_plugin_action_links_' . $file, array(self::class, 'add_check_link'));
+		// The library also adds this link under the description. Keep a single link in the action row.
+		add_filter('puc_manual_check_link-' . self::SLUG, array(self::class, 'hide_library_link'));
+	}
+
+	/**
+	 * @param mixed $links
+	 * @return mixed
+	 */
+	public static function add_check_link($links) {
+		if (!is_array($links) || !current_user_can('update_plugins')) {
+			return $links;
+		}
+
+		$url = wp_nonce_url(
+			add_query_arg(
+				array(
+					'puc_check_for_updates' => '1',
+					'puc_slug' => self::SLUG,
+				),
+				self_admin_url('plugins.php')
+			),
+			'puc_check_for_updates'
+		);
+
+		$links[] = '<a href="' . esc_url($url) . '">' . esc_html__('Check for updates', 'gm-demo-guide') . '</a>';
+		return $links;
+	}
+
+	/**
+	 * @return string
+	 */
+	public static function hide_library_link() {
+		return '';
 	}
 
 	/**
