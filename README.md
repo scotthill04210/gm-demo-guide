@@ -2,11 +2,11 @@
 
 Front-end tour, page help, and glossary for the Demo Growth Memberships demo. The reviewed copy lives in `content/default.json` (one tour, 18 help panels, 19 glossary terms, 50 ids). That file is the source of truth. Do not rewrite, renumber, or regenerate it.
 
-Activate the plugin on the demo site. Log in on the front end, then use the **Guide** button.
+Activate the plugin on the demo site. Log in on the front end, then use the **Tour Guide** button.
 
 ## What it does
 
-- **Tour.** Twelve stops across the demo. Start it from the Guide button. It does not start on its own.
+- **Tour.** Twelve stops across the demo. Start it from the Tour Guide button. It does not start on its own.
 - **This page.** The help note for the page you are on, when the content file has one.
 - **Glossary.** The terms from the content file, with a search box.
 - **Embedded screen.** The shortcode `[gm_demo_screen]` can frame another page on this same site. Nothing in the current demo uses it. Pages that already show a raw shortcode are left as they are.

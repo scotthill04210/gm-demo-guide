@@ -24,6 +24,7 @@
 
 		var strings = defaults({
 			guide: 'Guide',
+			tourGuide: 'Tour Guide',
 			close: 'Close',
 			closeGuide: 'Close the guide',
 			thisPage: 'This page',
@@ -101,7 +102,7 @@
 			root = el('div');
 			root.id = 'gm-guide-root';
 
-			launcher = el('button', 'gm-guide-launcher', strings.guide);
+			launcher = el('button', 'gm-guide-launcher', strings.tourGuide);
 			launcher.type = 'button';
 			launcher.setAttribute('aria-expanded', 'false');
 			launcher.setAttribute('aria-controls', 'gm-guide-drawer');

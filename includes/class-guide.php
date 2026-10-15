@@ -301,6 +301,7 @@ final class Guide {
 	private static function strings(): array {
 		return array(
 			'guide' => __('Guide', 'gm-demo-guide'),
+			'tourGuide' => __('Tour Guide', 'gm-demo-guide'),
 			'close' => __('Close', 'gm-demo-guide'),
 			'closeGuide' => __('Close the guide', 'gm-demo-guide'),
 			'thisPage' => __('This page', 'gm-demo-guide'),
