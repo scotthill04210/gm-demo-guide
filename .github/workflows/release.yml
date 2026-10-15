@@ -1,0 +1,19 @@
+name: Release zip
+on:
+  release:
+    types: [published]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p build/gm-demo-guide
+          rsync -a --exclude='.git' --exclude='.github' --exclude='.cursor' --exclude='build' --exclude='.gitignore' ./ build/gm-demo-guide/
+          cd build && zip -r ../gm-demo-guide.zip gm-demo-guide
+          unzip -l ../gm-demo-guide.zip | grep -q 'gm-demo-guide/gm-demo-guide.php'
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload "${{ github.event.release.tag_name }}" gm-demo-guide.zip --clobber

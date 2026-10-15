@@ -70,9 +70,23 @@ This shortcode is not the one already sitting as raw text on `/attendees/` and `
 
 ## Install
 
-1. Copy this folder to `wp-content/plugins/gm-demo-guide`.
+1. Install the `gm-demo-guide.zip` asset from a [GitHub release](https://github.com/scotthill04210/gm-demo-guide/releases), or copy this folder to `wp-content/plugins/gm-demo-guide`.
 2. Activate **GM Demo Guide** on the demo site. It is not forced on for the whole network, and it does not assume a blog id.
 3. Log in and open the front end.
+
+## Updates
+
+The repository is public. WordPress checks it with [Plugin Update Checker](https://github.com/YahnisElsts/plugin-update-checker) (MIT), bundled in `vendor/plugin-update-checker/`. No token is required.
+
+Updates prefer the latest GitHub release and download `gm-demo-guide.zip`. That archive has one top folder:
+
+```text
+gm-demo-guide/gm-demo-guide.php
+```
+
+WordPress unpacks that into `wp-content/plugins/gm-demo-guide/`, replacing the installed plugin. It does not use GitHub’s generated source archive, which would unpack as a different folder name. If a package still arrives under a name such as `gm-demo-guide-1.0.1`, the plugin renames that folder to `gm-demo-guide` before WordPress copies it. Other plugins are left alone.
+
+The `Version` header is the release version. Tag `v1.0.1` means the header says `Version: 1.0.1`. Publishing a release on `main` runs the **Release zip** workflow and attaches `gm-demo-guide.zip`. Do not mark the release as a pre-release. The update then appears under **Plugins** (or **Network Admin > Plugins** when the plugin is network-activated).
 
 There is no settings screen. Progress is kept in the browser (`localStorage`), so the plugin does not write to the database.
 
